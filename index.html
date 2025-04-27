@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sayan Debnath | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      line-height: 1.6;
+    }
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: url('3239480.webp') center/cover no-repeat;
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 1;
+    }
+    .navbar {
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: relative;
+    }
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    .nav-links li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+    }
+    .hero-content {
+      z-index: 2;
+      text-align: center;
+      padding: 5rem 2rem;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+    }
+    .hero-content span {
+      color: #00ffe0;
+    }
+    .btn {
+      margin-top: 1rem;
+      display: inline-block;
+      background: #00ffe0;
+      color: #000;
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 2rem;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+    }
+    .contact a {
+      color: #00ffe0;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #111;
+      color: #aaa;
+    }
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+      .navbar .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">Sayan.</div>
+      <ul class="nav-links">
+        <li><a href="#services">Skill</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h1>Hi, I'm <span>Sayan Debnath</span></h1>
+      <p>Engineer • Developer • Innovator</p>
+      <a href="#contact" class="btn">Let's Connect</a>
+    </div>
+  </header>
+
+  <section id="services" class="section">
+    <h2>Skill</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>Responsive, elegant websites using modern tech like HTML, CSS, JS.</p>
+      </div>
+      <div class="card">
+        <h3>Embedded Systems</h3>
+        <p>IoT & Robotics projects with Arduino, sensors, automation.</p>
+      </div>
+      <div class="card">
+        <h3>AI & Data Science</h3>
+        <p>Data insights, AI models, smart solutions for real-world problems.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Fire-Fighting Robot</h3>
+        <p>Arduino bot with flame sensors and fire extinguisher mechanism.</p>
+      </div>
+      <div class="card">
+        <h3>Amazon Clone</h3>
+        <p>E-commerce UI using HTML/CSS/JS with basic cart features.</p>
+      </div>
+      <div class="card">
+        <h3>Anti-Piracy Tool</h3>
+        <p>Prototype tool to detect pirated media using metadata & AI.</p>
+      </div>
+
+      <div class="card">
+        <h3>Bulk Email Automation using Python</h3>
+        <p>Developed a Python-based automation tool
+          to send bulk personalized emails efficiently using SMTP and CSV data handling.
+          </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:sayandebnath0921@gmail.com">sayandebnath0921@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/sayan-debnath-1106b3245" target="_blank">Profile</a></p>
+    <p>Call Me:<a href="tel:+916009937228">6009937228</a></p>
+
+  </section>
+
+  <footer>
+    <p>© 2025 Sayan Debnath. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Smooth scroll effect
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
